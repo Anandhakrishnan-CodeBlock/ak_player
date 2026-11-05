@@ -1,4 +1,5 @@
 import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 import '../../player_import.dart';
@@ -49,8 +50,7 @@ class AKVideoPlayerListWidget extends StatefulWidget {
   State<StatefulWidget> createState() => _AKVideoPlayerListWidgetState();
 }
 
-class _AKVideoPlayerListWidgetState
-    extends State<AKVideoPlayerListWidget> {
+class _AKVideoPlayerListWidgetState extends State<AKVideoPlayerListWidget> {
   final _smartManager = AKManager();
   final PlayerVariant _variant = PlayerVariant.list;
   final PlayMode _playMode = PlayMode.auto;

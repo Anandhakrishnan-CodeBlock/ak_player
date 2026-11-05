@@ -1,4 +1,5 @@
 import 'package:flutter/foundation.dart';
+
 import '../../player_import.dart';
 
 class VideoInfo {

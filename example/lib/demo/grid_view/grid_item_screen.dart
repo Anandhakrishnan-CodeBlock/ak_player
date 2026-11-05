@@ -48,8 +48,7 @@ class GridItemState extends State<GridItemScreen> {
           final screenHeight = constraints.maxHeight;
           return ListView.builder(
             controller: _scrollController,
-            padding: EdgeInsets
-                .zero, // Crucial: removes default status bar / navigation padding
+            padding: EdgeInsets.zero, // Crucial: removes default status bar / navigation padding
             physics: const PageScrollPhysics(),
             itemExtent: screenHeight,
             itemCount: widget.thumbnailUrls.length,

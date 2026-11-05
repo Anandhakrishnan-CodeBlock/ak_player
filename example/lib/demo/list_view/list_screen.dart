@@ -6,7 +6,6 @@ import '../../assets/video_urls.dart';
 import '../widgets/list_video_view.dart';
 import 'list_item_screen.dart';
 
-
 class ListScreen extends StatefulWidget {
   const ListScreen({super.key});
 

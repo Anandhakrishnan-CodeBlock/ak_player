@@ -23,10 +23,7 @@ class ZoneRenderObjectWidget extends SingleChildRenderObjectWidget {
   }
 
   @override
-  void updateRenderObject(
-    BuildContext context,
-    ZoneRenderBox renderObject,
-  ) {
+  void updateRenderObject(BuildContext context, ZoneRenderBox renderObject) {
     renderObject
       ..itemKey = itemKey
       ..onPainted = onPainted;

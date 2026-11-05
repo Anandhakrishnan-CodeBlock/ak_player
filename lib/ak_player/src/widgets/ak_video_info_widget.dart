@@ -1,5 +1,6 @@
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
+
 import '../../player_import.dart';
 
 class VideoInfoWidget extends StatefulWidget {

@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import '../../assets/image_urls.dart';
 import '../../assets/video_urls.dart';
 
-
 class WebMacosGridScreen extends StatefulWidget {
   const WebMacosGridScreen({super.key});
 

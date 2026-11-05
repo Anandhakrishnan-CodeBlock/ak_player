@@ -5,7 +5,6 @@ import '../../assets/image_urls.dart';
 import '../../assets/video_urls.dart';
 import '../widgets/single_video_view.dart';
 
-
 class TabViewThree extends StatelessWidget {
   const TabViewThree({super.key});
 

@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 import '../widgets/single_video_view.dart';
 
-
 class ListItemScreen extends StatelessWidget {
   final int index;
   final String videoUrl;
