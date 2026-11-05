@@ -8,9 +8,7 @@ class VideoUrls {
   static String video3 =
       "https://raw.githubusercontent.com/Anandhakrishnan-CodeBlock/ak_player/main/example/assets/videos/video3.mp4";
   static String portraitVideo =
-      "https://raw.githubusercontent.com/Anandhakrishnan-CodeBlock/ak_player/main/example/assets/videos/smart_player_count_portrait.mp4";
-  static String portraitVideoFixed =
-      "https://raw.githubusercontent.com/Anandhakrishnan-CodeBlock/ak_player/main/example/assets/videos/smart_player_count_portrait_fixed.mp4";
+      "https://raw.githubusercontent.com/Anandhakrishnan-CodeBlock/ak_player/main/example/assets/videos/ak_player_count_portrait.mp4";
   static String landscapeVideo =
-      "https://raw.githubusercontent.com/Anandhakrishnan-CodeBlock/ak_player/main/example/assets/videos/smart_player_count_landscape.mp4";
+      "https://raw.githubusercontent.com/Anandhakrishnan-CodeBlock/ak_player/main/example/assets/videos/ak_player_count_landscape.mp4";
 }
