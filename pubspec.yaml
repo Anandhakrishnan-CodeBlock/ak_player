@@ -1,6 +1,6 @@
 name: ak_player
-description: "A new Flutter project."
-version: 0.0.1
+description: "A video player project in flutter."
+version: 0.0.1-alpha.1
 homepage:
 
 environment:
