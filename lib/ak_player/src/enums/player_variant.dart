@@ -1,0 +1,1 @@
+enum PlayerVariant { list, grid, detail }
