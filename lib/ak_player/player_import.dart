@@ -15,7 +15,7 @@ export 'src/ds/ak_stack.dart';
 
 export 'src/enums/player_event_status.dart';
 
-export 'src/models/smart_video_info.dart';
+export 'src/models/ak_video_info.dart';
 export 'src/models/player_events.dart';
 
 export 'src/render/zone_render_box.dart';
