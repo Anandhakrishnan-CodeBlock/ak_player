@@ -98,6 +98,21 @@ Add both packages into pubspec.yaml
 </dict>
 ```
 
+## Navigation Handler
+### NavigationController
+Acts as a state store to preserve and restore video playback data across navigation stack changes.
+To enable this, register the controller inside the `navigatorObservers` property of your `MaterialApp`.
+```
+return MaterialApp(
+   navigatorObservers: [NavigationController()], // --> Add this controller initialization
+   home: Scaffold(
+   appBar: AppBar(title: const Text('Smart Video Player')),
+   body: Builder(
+   .
+   .
+   .
+```
+
 ## Widgets
 ### 1. AKPlayer
 A standard player widget designed for single video playback within a view.
