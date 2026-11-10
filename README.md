@@ -156,7 +156,7 @@ AKPlayer(
 )
 ```
 ### Sample Output
-![AKPlayer](https://github.com/Anandhakrishnan-CodeBlock/ak_player/blob/0.0.1-alpha.2/assets/ak_player.gif?raw=true)
+![AKPlayer](https://github.com/Anandhakrishnan-CodeBlock/ak_player/blob/main/assets/ak_player.gif?raw=true)
 
 ### 2. AKListItem with AKListPlayer
 Designed for video playback inside scrollable views (such as `ListView`).
@@ -229,7 +229,7 @@ ListView.builder(
 )
 ```
 ### Sample Output Layout - TabView, BottomNav, ListView and BottomSheet
-![AKPlater](https://github.com/Anandhakrishnan-CodeBlock/ak_player/blob/0.0.1-alpha.2/assets/ak_player_demo.gif?raw=true)
+![AKPlater](https://github.com/Anandhakrishnan-CodeBlock/ak_player/blob/main/assets/ak_player_demo.gif?raw=true)
 
 ### 3. AKGridItem with AKGridPlayer
 Designed for video playback inside scrollable views (such as `GridView`). Lightweight thumbnail images load first to ensure smooth scrolling performance,
@@ -319,7 +319,7 @@ GridView.builder(
 )
 ```
 ### Sample Output
-![AKGrid](https://github.com/Anandhakrishnan-CodeBlock/ak_player/blob/0.0.1-alpha.2/assets/ak_player_grid.gif?raw=true)
+![AKGrid](https://github.com/Anandhakrishnan-CodeBlock/ak_player/blob/main/assets/ak_player_grid.gif?raw=true)
 
 ### 4. AKWebMacosGridPlayer
 A player widget designed exclusively for Web and macOS that automatically starts video playback when the cursor hovers over a grid item.
@@ -382,7 +382,7 @@ GridView.builder(
 )
 ```
 ### Sample Output - Web
-![AKWeb](https://github.com/Anandhakrishnan-CodeBlock/ak_player/blob/0.0.1-alpha.2/assets/ak_player_web.gif?raw=true)
+![AKWeb](https://github.com/Anandhakrishnan-CodeBlock/ak_player/blob/main/assets/ak_player_web.gif?raw=true)
 
 ### Sample Output - MacOs
-![AKMac](https://github.com/Anandhakrishnan-CodeBlock/ak_player/blob/0.0.1-alpha.2/assets/ak_player_macos.gif?raw=true)
+![AKMac](https://github.com/Anandhakrishnan-CodeBlock/ak_player/blob/main/assets/ak_player_macos.gif?raw=true)
