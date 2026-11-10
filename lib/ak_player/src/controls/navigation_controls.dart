@@ -23,13 +23,13 @@ class NavigationController extends NavigatorObserver {
   void didPush(Route<dynamic> route, Route<dynamic>? previousRoute) {
     super.didPush(route, previousRoute);
     navigationControls.didPush();
-    debugPrint('Nav - Pushed route: ${route.settings.name}');
+    //debugPrint('Nav - Pushed route: ${route.settings.name}');
   }
 
   @override
   void didPop(Route<dynamic> route, Route<dynamic>? previousRoute) {
     super.didPop(route, previousRoute);
     navigationControls.didPop();
-    debugPrint('Nav - Popped route: ${route.settings.name}');
+    //debugPrint('Nav - Popped route: ${route.settings.name}');
   }
 }
