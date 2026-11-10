@@ -318,8 +318,8 @@ GridView.builder(
     },
 )
 ```
-### Sample Output
-![AKGrid](https://github.com/Anandhakrishnan-CodeBlock/ak_player/blob/main/assets/ak_player_grid.gif?raw=true)
+### Sample Output - GridView
+![AKGridView](https://github.com/Anandhakrishnan-CodeBlock/ak_player/blob/main/assets/ak_player_grid.gif?raw=true)
 
 ### 4. AKWebMacosGridPlayer
 A player widget designed exclusively for Web and macOS that automatically starts video playback when the cursor hovers over a grid item.
@@ -385,4 +385,7 @@ GridView.builder(
 ![AKWeb](https://github.com/Anandhakrishnan-CodeBlock/ak_player/blob/main/assets/ak_player_web.gif?raw=true)
 
 ### Sample Output - MacOs
-![AKMac](https://github.com/Anandhakrishnan-CodeBlock/ak_player/blob/main/assets/ak_player_macos.gif?raw=true)
+![AKMacOs](https://github.com/Anandhakrishnan-CodeBlock/ak_player/blob/main/assets/ak_player_macos.gif?raw=true)
+
+# Bugs/Requests
+Feel free to open an issue if you encounter any problems or think that the plugin is missing some feature.
