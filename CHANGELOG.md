@@ -1,3 +1,7 @@
+## 0.0.1-alpha.5
+
+* Demo assets size issue - hotfix
+
 ## 0.0.1-alpha.4
 
 * Demo assets - hotfix
