@@ -98,6 +98,21 @@ Add both packages into pubspec.yaml
 </dict>
 ```
 
+## Navigation Handler
+### NavigationController
+Acts as a state store to preserve and restore video playback data across navigation stack changes.
+To enable this, register the controller inside the `navigatorObservers` property of your `MaterialApp`.
+```
+return MaterialApp(
+   navigatorObservers: [NavigationController()], // --> Add this controller initialization
+   home: Scaffold(
+   appBar: AppBar(title: const Text('Smart Video Player')),
+   body: Builder(
+   .
+   .
+   .
+```
+
 ## Widgets
 ### 1. AKPlayer
 A standard player widget designed for single video playback within a view.
@@ -141,6 +156,7 @@ AKPlayer(
 )
 ```
 ### Sample Output
+![AKPlayer](https://github.com/Anandhakrishnan-CodeBlock/ak_player/blob/0.0.1-alpha.2/assets/ak_player.gif)
 
 ### 2. AKListItem with AKListPlayer
 Designed for video playback inside scrollable views (such as `ListView`).
@@ -212,7 +228,8 @@ ListView.builder(
     },
 )
 ```
-### Sample Output
+### Sample Output Layout - TabView, BottomNav, ListView and BottomSheet
+![AKPlater](https://github.com/Anandhakrishnan-CodeBlock/ak_player/blob/0.0.1-alpha.2/assets/ak_player_demo.gif)
 
 ### 3. AKGridItem with AKGridPlayer
 Designed for video playback inside scrollable views (such as `GridView`). Lightweight thumbnail images load first to ensure smooth scrolling performance,
@@ -302,6 +319,7 @@ GridView.builder(
 )
 ```
 ### Sample Output
+![AKGrid](https://github.com/Anandhakrishnan-CodeBlock/ak_player/blob/0.0.1-alpha.2/assets/ak_player_grid.gif)
 
 ### 4. AKWebMacosGridPlayer
 A player widget designed exclusively for Web and macOS that automatically starts video playback when the cursor hovers over a grid item.
@@ -363,4 +381,8 @@ GridView.builder(
     },
 )
 ```
-### Sample Output
+### Sample Output - Web
+![AKWeb](https://github.com/Anandhakrishnan-CodeBlock/ak_player/blob/0.0.1-alpha.2/assets/ak_player_web.gif)
+
+### Sample Output - MacOs
+![AKMac](https://github.com/Anandhakrishnan-CodeBlock/ak_player/blob/0.0.1-alpha.2/assets/ak_player_macos.gif)
