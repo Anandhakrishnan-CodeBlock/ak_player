@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       navigatorObservers: [NavigationController()],
       home: Scaffold(
-        appBar: AppBar(title: const Text('Smart Video Player')),
+        appBar: AppBar(title: const Text('AK Video Player')),
         body: Builder(
           builder: (innerContext) {
             return Column(

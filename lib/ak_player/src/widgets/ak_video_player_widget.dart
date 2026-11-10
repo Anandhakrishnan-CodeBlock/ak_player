@@ -52,7 +52,7 @@ class AKVideoPlayerWidget extends StatefulWidget {
 }
 
 class _AKVideoPlayerWidgetState extends State<AKVideoPlayerWidget> {
-  final _smartManager = AKManager();
+  final _akManager = AKManager();
   final PlayerVariant _variant = PlayerVariant.detail;
   final PlayMode _playMode = PlayMode.auto;
   bool _activationScheduled = false;
@@ -66,7 +66,7 @@ class _AKVideoPlayerWidgetState extends State<AKVideoPlayerWidget> {
 
   @override
   void initState() {
-    _videoStream = _smartManager.selectedVideo;
+    _videoStream = _akManager.selectedVideo;
     _borderRadius = widget.borderRadius ?? BorderRadiusGeometry.zero;
     _lastWatchedState = widget.lastWatchedState ?? LastWatchedState.forgot;
     _isAsset = widget.isAsset ?? false;
@@ -82,7 +82,7 @@ class _AKVideoPlayerWidgetState extends State<AKVideoPlayerWidget> {
       isAsset: _isAsset,
       looping: _looping,
     );
-    _smartManager.onInit(info: _smartVideoInfo, key: widget.key!);
+    _akManager.onInit(info: _smartVideoInfo, key: widget.key!);
     super.initState();
   }
 
@@ -105,7 +105,7 @@ class _AKVideoPlayerWidgetState extends State<AKVideoPlayerWidget> {
 
   @override
   void dispose() {
-    _smartManager.onDispose(key: widget.key!);
+    _akManager.onDispose(key: widget.key!);
     super.dispose();
   }
 
@@ -115,12 +115,12 @@ class _AKVideoPlayerWidgetState extends State<AKVideoPlayerWidget> {
       key: _smartVideoInfo.key,
       onPaint: (activateOnPaint) {
         if (activateOnPaint &&
-            _smartManager.selectedKey != widget.key &&
+            _akManager.selectedKey != widget.key &&
             !_activationScheduled) {
           _activationScheduled = true;
           SchedulerBinding.instance.addPostFrameCallback((_) {
             _activationScheduled = false;
-            _smartManager.startDrawing(key: widget.key!);
+            _akManager.startDrawing(key: widget.key!);
           });
         }
       },
@@ -171,7 +171,7 @@ class _AKVideoPlayerWidgetState extends State<AKVideoPlayerWidget> {
                           durationConfig: widget.durationConfig,
                           seekBarConfig: widget.seekBarConfig,
                           videoConfig: widget.videoConfig,
-                          smartVideoInfo: _smartVideoInfo,
+                          videoInfo: _smartVideoInfo,
                         );
                         break;
                     }

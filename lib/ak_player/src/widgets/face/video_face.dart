@@ -13,7 +13,7 @@ class VideoFace extends StatefulWidget {
   final DurationConfig? durationConfig;
   final SeekBarConfig? seekBarConfig;
   final VideoConfig? videoConfig;
-  final VideoInfo smartVideoInfo;
+  final VideoInfo videoInfo;
   final VoidCallback? onClickItem;
 
   const VideoFace({
@@ -25,7 +25,7 @@ class VideoFace extends StatefulWidget {
     this.durationConfig,
     this.seekBarConfig,
     this.onClickItem,
-    required this.smartVideoInfo,
+    required this.videoInfo,
     this.videoConfig = const VideoConfig(),
   });
 
@@ -187,9 +187,9 @@ class VideoFaceState extends State<VideoFace> {
       controller.pause();
       AKLogger.info(
         "STOPPED",
-        widget.smartVideoInfo.videoUrl,
-        widget.smartVideoInfo.looping,
-        widget.smartVideoInfo.key,
+        widget.videoInfo.videoUrl,
+        widget.videoInfo.looping,
+        widget.videoInfo.key,
       );
     });
   }

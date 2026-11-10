@@ -18,7 +18,7 @@ class AKListItemWidget extends StatefulWidget {
     required this.child,
   }) : assert(
          duration >= const Duration(milliseconds: 200),
-         'SmartListItemWidget.duration must be at least 200ms '
+         'AKListItemWidget.duration must be at least 200ms '
          '(got $duration). Shorter buffers make it too easy for fast or '
          'boundary-jitter scrolling to repeatedly re-initialize the video '
          'player, which is expensive and visibly janky.',
@@ -30,7 +30,7 @@ class AKListItemWidget extends StatefulWidget {
 }
 
 class _AKListItemWidgetState extends State<AKListItemWidget> {
-  final _smartManager = AKManager();
+  final _akManager = AKManager();
 
   ScrollPosition? _scrollPosition;
   ZoneRenderBox? _renderBox;
@@ -100,7 +100,7 @@ class _AKListItemWidgetState extends State<AKListItemWidget> {
       }
 
       // Single path — goes through the settle-duration guard every time.
-      _smartManager.reportVisibility(
+      _akManager.reportVisibility(
         key: widget.itemKey,
         score: score,
         duration: widget.duration,
@@ -118,7 +118,7 @@ class _AKListItemWidgetState extends State<AKListItemWidget> {
   @override
   void dispose() {
     _scrollPosition?.removeListener(_onScroll);
-    _smartManager.onDispose(key: widget.itemKey);
+    _akManager.onDispose(key: widget.itemKey);
     super.dispose();
   }
 

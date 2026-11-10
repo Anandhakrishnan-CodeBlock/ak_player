@@ -23,7 +23,7 @@ class AKGridItemWidget extends StatefulWidget {
     this.settleDuration = const Duration(milliseconds: 200),
   }) : assert(
          settleDuration >= const Duration(milliseconds: 200),
-         'SmartGridItemWidget.settleDuration must be at least 200ms. Shorter '
+         'AKGridItemWidget.settleDuration must be at least 200ms. Shorter '
          'buffers make fast or boundary-jitter scrolling re-initialize the '
          'video player repeatedly, which is expensive and visibly janky.',
        ),
@@ -38,7 +38,7 @@ class AKGridItemWidget extends StatefulWidget {
 class _AKGridItemWidgetState extends State<AKGridItemWidget> {
   static const double _edgeTolerance = 0.5;
 
-  final _smartManager = AKManager();
+  final _akManager = AKManager();
 
   ZoneRenderBox? _renderBox;
   ScrollPosition? _scrollPosition;
@@ -92,7 +92,7 @@ class _AKGridItemWidgetState extends State<AKGridItemWidget> {
     _isCandidate = isMe;
     _settleTimer?.cancel();
     if (!isMe) return;
-    if (_smartManager.selectedKey == null) {
+    if (_akManager.selectedKey == null) {
       _activate();
     } else {
       _settleTimer = Timer(widget.settleDuration, _activate);
@@ -101,8 +101,8 @@ class _AKGridItemWidgetState extends State<AKGridItemWidget> {
 
   void _activate() {
     if (!mounted || !_isCandidate) return;
-    if (_smartManager.selectedKey == widget.itemKey) return; // already playing
-    _smartManager.startDrawing(key: widget.itemKey);
+    if (_akManager.selectedKey == widget.itemKey) return; // already playing
+    _akManager.startDrawing(key: widget.itemKey);
   }
 
   void _onScroll() => _scheduleRecompute();

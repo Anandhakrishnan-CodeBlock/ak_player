@@ -53,7 +53,7 @@ class AKVideoPlayerGridWebMacosWidget extends StatefulWidget {
 
 class _AKVideoPlayerGridWebMacosWidgetState
     extends State<AKVideoPlayerGridWebMacosWidget> {
-  final _smartManager = AKManager();
+  final _akManager = AKManager();
   final PlayerVariant _variant = PlayerVariant.grid;
   final PlayMode _playMode = PlayMode.auto;
 
@@ -66,7 +66,7 @@ class _AKVideoPlayerGridWebMacosWidgetState
 
   @override
   void initState() {
-    _videoStream = _smartManager.selectedVideo;
+    _videoStream = _akManager.selectedVideo;
     _borderRadius = widget.borderRadius ?? BorderRadiusGeometry.zero;
     _lastWatchedState = widget.lastWatchedState ?? LastWatchedState.forgot;
     _isAsset = widget.isAsset ?? false;
@@ -82,7 +82,7 @@ class _AKVideoPlayerGridWebMacosWidgetState
       isAsset: _isAsset,
       looping: _looping,
     );
-    _smartManager.onInit(info: _smartVideoInfo, key: widget.key!);
+    _akManager.onInit(info: _smartVideoInfo, key: widget.key!);
     super.initState();
   }
 
@@ -105,7 +105,7 @@ class _AKVideoPlayerGridWebMacosWidgetState
 
   @override
   void dispose() {
-    _smartManager.onDispose(key: widget.key!);
+    _akManager.onDispose(key: widget.key!);
     super.dispose();
   }
 
@@ -114,8 +114,8 @@ class _AKVideoPlayerGridWebMacosWidgetState
     return MouseRegion(
       cursor: SystemMouseCursors.click,
       onHover: (event) {
-        if (_smartManager.selectedKey != widget.key) {
-          _smartManager.startDrawing(key: widget.key!);
+        if (_akManager.selectedKey != widget.key) {
+          _akManager.startDrawing(key: widget.key!);
         }
       },
       child: ClipRRect(
@@ -177,7 +177,7 @@ class _AKVideoPlayerGridWebMacosWidgetState
                               durationConfig: widget.durationConfig,
                               seekBarConfig: widget.seekBarConfig,
                               videoConfig: widget.videoConfig,
-                              smartVideoInfo: _smartVideoInfo,
+                              videoInfo: _smartVideoInfo,
                               onClickItem: widget.onClickGridItem,
                             );
                             break;

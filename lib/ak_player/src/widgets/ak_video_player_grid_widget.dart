@@ -51,11 +51,11 @@ class AKVideoPlayerGridWidget extends StatefulWidget {
 }
 
 class _AKVideoPlayerGridWidgetState extends State<AKVideoPlayerGridWidget> {
-  final _smartManager = AKManager();
+  final _akManager = AKManager();
   final PlayerVariant variant = PlayerVariant.grid;
   final PlayMode playMode = PlayMode.auto;
 
-  late VideoInfo _smartVideoInfo;
+  late VideoInfo _videoInfo;
   late Stream<PlayerEvent> _videoStream;
   late BorderRadiusGeometry _borderRadius =
       widget.borderRadius ?? BorderRadiusGeometry.zero;
@@ -66,13 +66,13 @@ class _AKVideoPlayerGridWidgetState extends State<AKVideoPlayerGridWidget> {
 
   @override
   void initState() {
-    _videoStream = _smartManager.selectedVideo;
+    _videoStream = _akManager.selectedVideo;
     _borderRadius = widget.borderRadius ?? BorderRadiusGeometry.zero;
     _lastWatchedState = widget.lastWatchedState ?? LastWatchedState.forgot;
     _isAsset = widget.isAsset ?? false;
     _looping = widget.looping ?? false;
 
-    _smartVideoInfo = VideoInfo(
+    _videoInfo = VideoInfo(
       key: widget.key!,
       videoUrl: widget.videoUrl,
       debugLabelText: widget.debugLabelText,
@@ -82,7 +82,7 @@ class _AKVideoPlayerGridWidgetState extends State<AKVideoPlayerGridWidget> {
       isAsset: _isAsset,
       looping: _looping,
     );
-    _smartManager.onInit(info: _smartVideoInfo, key: widget.key!);
+    _akManager.onInit(info: _videoInfo, key: widget.key!);
     super.initState();
   }
 
@@ -105,7 +105,7 @@ class _AKVideoPlayerGridWidgetState extends State<AKVideoPlayerGridWidget> {
 
   @override
   void dispose() {
-    _smartManager.onDispose(key: widget.key!);
+    _akManager.onDispose(key: widget.key!);
     super.dispose();
   }
 
@@ -166,7 +166,7 @@ class _AKVideoPlayerGridWidgetState extends State<AKVideoPlayerGridWidget> {
                             durationConfig: widget.durationConfig,
                             seekBarConfig: widget.seekBarConfig,
                             videoConfig: widget.videoConfig,
-                            smartVideoInfo: _smartVideoInfo,
+                            videoInfo: _videoInfo,
                             onClickItem: widget.onClickGridItem,
                           );
                           break;

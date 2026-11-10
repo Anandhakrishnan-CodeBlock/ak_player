@@ -106,7 +106,7 @@ To enable this, register the controller inside the `navigatorObservers` property
 return MaterialApp(
    navigatorObservers: [NavigationController()], // --> Add this controller initialization
    home: Scaffold(
-   appBar: AppBar(title: const Text('Smart Video Player')),
+   appBar: AppBar(title: const Text('AK Video Player')),
    body: Builder(
    .
    .

@@ -58,7 +58,7 @@ class _VideoInfoRenderObject extends SingleChildRenderObjectWidget {
   }
 }
 
-/// When [activateOnPaint] is true (this player is NOT inside a (SmartListItemWidget)
+/// When [activateOnPaint] is true (this player is NOT inside a (AKListItemWidget)
 /// When [activateOnPaint] is false (inside a list)
 
 class VideoInfoRenderObject extends RenderProxyBox {

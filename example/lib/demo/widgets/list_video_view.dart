@@ -12,7 +12,7 @@ class ListVideoView extends StatelessWidget {
         child: Icon(Icons.list_rounded, color: Colors.white),
       ),
       title: Text('Video ${index + 1}'),
-      subtitle: const Text('Smart List Player • Play video while scrolling'),
+      subtitle: const Text('AK List Player • Play video while scrolling'),
     );
   }
 }

@@ -34,7 +34,7 @@ class AKManager extends NavigationControls {
     _selectedVideo.add(PlayerEvent.failed(key: key, error: error));
   }
 
-  final _smartStack = AKStack();
+  final _akStack = AKStack();
   final InfoControls _infoControls = InfoController();
   final ListControls _listControls = ListController();
 
@@ -98,8 +98,8 @@ class AKManager extends NavigationControls {
   void didPop() {
     _infoControls.clearAll();
     _listControls.clearList();
-    Map<Key, VideoInfo> videos = _smartStack.top();
-    _smartStack.pop();
+    Map<Key, VideoInfo> videos = _akStack.top();
+    _akStack.pop();
     if (videos.isNotEmpty) {
       _infoControls.setVideos = videos;
       _infoControls.playLastWatchedVideo(
@@ -118,7 +118,7 @@ class AKManager extends NavigationControls {
     if (videos.isNotEmpty) {
       _infoControls.saveLastWatchedVideo();
       _infoControls.pauseVideo();
-      _smartStack.push(videos);
+      _akStack.push(videos);
       _infoControls.clearAll();
       _listControls.clearList();
     }

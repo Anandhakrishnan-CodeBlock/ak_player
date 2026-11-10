@@ -11,7 +11,7 @@ class BottomSheetChildView extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: const [
           Text(
-            'Smart Player Widget',
+            'AK Player Widget',
             style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
           ),
           SizedBox(height: 12),

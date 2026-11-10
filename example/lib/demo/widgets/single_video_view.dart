@@ -15,7 +15,7 @@ class SingleVideoView extends StatelessWidget {
           IconsView(),
           SizedBox(height: 8),
           Text(
-            'Smart Player Widget',
+            'AK Player Widget',
             style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
           ),
           SizedBox(height: 8),
